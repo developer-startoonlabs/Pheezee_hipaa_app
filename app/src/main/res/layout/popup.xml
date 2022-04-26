@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="50dp"
+    android:background="@drawable/popup_window"
+    app:layout_constraintCircleRadius="10dp">
+
+    <TextView
+        android:id="@+id/tv_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/ebrima"
+        android:gravity="center"
+        android:text="Add patient"
+        android:textColor="@color/good_green"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/patient_image_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_create_account"
+    android:layout_marginTop="24dp">
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center|top"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/test_patient_add_1" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/test_patient_add_1"
+        app:civ_border_width="0.1dp"
+        android:visibility="gone"
+        android:id="@+id/profile_picture"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:layout_gravity="center|top"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/test_patient_add_1" />
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_patient_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21,ASDasdad"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:alpha="0.5"
+        android:textColor="@color/pitch_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_create_account"/>
+
+    <EditText
+        android:id="@+id/patientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18dp"
+        android:hint="Patient Name"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient_image_layout" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:background="@color/ic_add_patient_grey_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientGender"
+        android:paddingTop="1dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientGender"
+        android:paddingTop="30dp"
+        android:paddingBottom="13dp">
+
+
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:text="Cancel"
+            android:background="@drawable/round_cancel_buttons"
+            android:textColor="@color/good_green"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="3dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="1dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:text="Add"
+            android:background="@drawable/round_same_buttons"
+            android:textColor="@color/white"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/patientAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Age"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientName" />
+
+
+    <Spinner
+        android:id="@+id/sp_case_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/spinner_background"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:outlineProvider="background"
+        android:scaleType="fitXY"
+        android:spinnerMode="dialog"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientAge" />
+
+    <EditText
+        android:id="@+id/contentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:textSize="18dp"
+        android:hint="Condition"
+        android:visibility="gone"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_case_des" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:text="Gender"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentDescription" />
+
+    <RadioGroup
+        android:id="@+id/patientGender"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/contentDescription">
+
+        <RadioButton
+            android:id="@+id/radioBtn_male"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioBtn_female"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Female" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
